@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/chat.html');
 });
 
+app.get('/count', (req, res) => {
+    res.sendFile(__dirname + '/public/count.html');
+})
+
 app.get('/chat', (req, res) => {
     var question = req.query.mytext;
     var config = {
