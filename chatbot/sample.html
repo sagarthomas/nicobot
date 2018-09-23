@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <form action="">
+            <input id="input" type="text" placeholder="Brand">
+            <input id="submitBtn" type="submit">
+        </form>
+        <p id="output">Temp Output</p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </body>
+    <script>
+        $(document).ready(function(){
+            const Url = 'https://mysterious-inlet-47286.herokuapp.com/send';
+            $('#submitBtn').click(function() {
+                console.log('test')
+                var friggingHell = document.getElementById('input').value
+                console.log(friggingHell)
+
+                $.ajax({
+                    url:Url,
+                    type: "POST",
+                    data: friggingHell,
+                    success: function (result) {
+                        //$('#output').text(result)
+                        console.log(result);
+                    }
+                })
+                return false;
+            })
+        });
+    </script>
+</html>
