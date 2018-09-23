@@ -13,6 +13,7 @@ def doTrain():
 
 if __name__ == '__main__':
     try:
+        
         app.run(server='gunicorn', host='localhost', port=5000)
     except:
         app.run(host='localhost', port=5000)
