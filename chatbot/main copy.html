@@ -10,17 +10,9 @@ def send():
 def doTrain():
     train()
     return "Training complete"
-'''
-<form action="/~bbarif/alpha-art" method="get">
-  <label for="str">Name:</label>
-  <input id="str" type="text" name="str">
-  <button type="submit">Submit</button>
-</form>
-'''
 
 if __name__ == '__main__':
     try:
-        
         app.run(server='gunicorn', host='localhost', port=5000)
     except:
         app.run(host='localhost', port=5000)
